@@ -13,7 +13,7 @@ export const Checkbox = ({ id, taskDesc }) => {
     <div
       className="checkbox-holder"
       data-testid="checkbox-action"
-      onClick={() => archiveTask()}
+      // onClick={() => archiveTask()}
       onKeyDown={(e) => {
         if (e.key === 'Enter') archiveTask();
       }}
