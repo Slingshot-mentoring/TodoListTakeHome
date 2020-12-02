@@ -34,12 +34,12 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
           <div
             onClick={() => {
               setShowTaskDate(false);
-              setTaskDate(moment().add(1, 'day').format('DD/MM/YYYY'));
+              setTaskDate(moment().add(2, 'day').format('DD/MM/YYYY'));
             }}
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 setShowTaskDate(false);
-                setTaskDate(moment().add(1, 'day').format('DD/MM/YYYY'));
+                setTaskDate(moment().add(2, 'day').format('DD/MM/YYYY'));
               }
             }}
             data-testid="task-date-tomorrow"
@@ -53,29 +53,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
             <span>Tomorrow</span>
           </div>
         </li>
-        <li>
-          <div
-            onClick={() => {
-              setShowTaskDate(false);
-              setTaskDate(moment().add(7, 'days').format('DD/MM/YYYY'));
-            }}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                setShowTaskDate(false);
-                setTaskDate(moment().add(7, 'days').format('DD/MM/YYYY'));
-              }
-            }}
-            data-testid="task-date-next-week"
-            aria-label="Select next week as the task date"
-            tabIndex={0}
-            role="button"
-          >
-            <span>
-              <FaRegPaperPlane />
-            </span>
-            <span>Next week</span>
-          </div>
-        </li>
+        {/* add two functions: Add task for 7 days and for 1 month. Add these two to Sidebar.js */}
       </ul>
     </div>
   );
