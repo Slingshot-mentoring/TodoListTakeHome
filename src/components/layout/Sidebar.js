@@ -43,6 +43,7 @@ export const Sidebar = () => {
             <span>Inbox</span>
           </div>
         </li>
+        {showProjects && <AddProject />}
         <li
           data-testid="today"
           className={active === 'today' ? 'active' : undefined}
@@ -90,8 +91,6 @@ export const Sidebar = () => {
       </div>
 
       <ul className="sidebar__projects">{showProjects && <Projects />}</ul>
-
-      {showProjects && <AddProject />}
     </div>
   );
 };
